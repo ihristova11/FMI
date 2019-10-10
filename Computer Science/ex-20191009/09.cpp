@@ -19,5 +19,6 @@ int main()
 	} while (l != 2);
 
 	std::cout << res << std::endl;
+	
 	return 0;
 }
