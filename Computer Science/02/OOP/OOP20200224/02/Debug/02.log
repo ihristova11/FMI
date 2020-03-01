@@ -1,0 +1,5 @@
+﻿  02.cpp
+D:\Git\FMI\Computer Science\02\OOP\OOP20200224\02\02.cpp(61,20): warning C4018:  '<': signed/unsigned mismatch
+D:\Git\FMI\Computer Science\02\OOP\OOP20200224\02\02.cpp(70,20): warning C4018:  '<': signed/unsigned mismatch
+D:\Git\FMI\Computer Science\02\OOP\OOP20200224\02\02.cpp(83,20): warning C4018:  '<': signed/unsigned mismatch
+  02.vcxproj -> D:\Git\FMI\Computer Science\02\OOP\OOP20200224\Debug\02.exe
