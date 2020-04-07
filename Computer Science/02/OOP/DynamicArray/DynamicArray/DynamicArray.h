@@ -14,7 +14,8 @@ public:
 	DynamicArray<T>& operator=(const DynamicArray&); // rule of 3/5
 	~DynamicArray();
 
-	T& operator[](const size_t&) const;
+	const T& operator[](const size_t&) const;
+	T& operator[](const size_t&);
 
 	DynamicArray<T>& push_back(const T&);
 	void pop_back();
@@ -25,9 +26,6 @@ public:
 	// getters
 	size_t get_capacity() const;
 	size_t get_size() const;
-
-	// friends
-	friend std::ostream& operator << (std::ostream& out, const DynamicArray<T>& a);
 
 private:
 	T* elements;

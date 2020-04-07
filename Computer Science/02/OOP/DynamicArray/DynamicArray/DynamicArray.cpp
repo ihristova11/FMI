@@ -25,7 +25,16 @@ DynamicArray<T>::~DynamicArray()
 }
 
 template<typename T>
-T& DynamicArray<T>::operator[] (const size_t& index) const
+const T& DynamicArray<T>::operator[] (const size_t& index) const
+{
+	if (index < 0 || index >= this->size)
+		throw "Index out of range!";
+
+	return this->elements[index];
+}
+
+template<typename T>
+T& DynamicArray<T>::operator[](const size_t& index)
 {
 	if (index < 0 || index >= this->size)
 		throw "Index out of range!";
@@ -72,7 +81,6 @@ void DynamicArray<T>::pop_back()
 template<typename T>
 void DynamicArray<T>::insert(const size_t& index, const T& element)
 {
-	// check for index out of range
 	if (index < 0 || index >= this->size)
 		throw "Index out of range!";
 
@@ -88,6 +96,7 @@ void DynamicArray<T>::insert(const size_t& index, const T& element)
 	}
 
 	this->elements[index] = element;
+	++this->size;
 }
 
 template<typename T>
@@ -148,14 +157,4 @@ template<typename T>
 void DynamicArray<T>::delete_internals()
 {
 	delete[] this->elements;
-}
-
-template<typename T>
-std::ostream& operator<<(std::ostream& out, const DynamicArray<T>& array)
-{
-	for (size_t i = 0; i < array.size; i++)
-	{
-		out << array.elements[i];
-	}
-	return out;
 }
