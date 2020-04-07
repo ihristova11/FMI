@@ -59,7 +59,7 @@ DynamicArray<T>& DynamicArray<T>::push_back(const T& value)
 {
 	if (this->capacity <= this->size)
 	{
-		size_t temp_capacity = (this->capacity == 0) ? 1 : this->capacity * 2;
+		size_t temp_capacity = (this->capacity == 0) ? MinSize : this->capacity * CapacityFactor;
 		this->reserve(temp_capacity);
 	}
 
@@ -86,7 +86,7 @@ void DynamicArray<T>::insert(const size_t& index, const T& element)
 
 	if (this->capacity <= this->size)
 	{
-		size_t temp_capacity = (this->capacity == 0) ? 1 : this->capacity * 2;
+		size_t temp_capacity = (this->capacity == 0) ? MinSize : this->capacity * CapacityFactor;
 		this->reserve(temp_capacity);
 	}
 

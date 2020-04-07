@@ -1,6 +1,7 @@
 #ifndef DYNAMIC_ARRAY_H
 #define DYNAMIC_ARRAY_H
 #define MinSize 1
+#define CapacityFactor 2
 
 #include <iostream>
 
